@@ -1,0 +1,30 @@
+{
+  "name": "long-number",
+  "version": "1.0.0",
+  "description": "Short cut for long number",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "lite-server --config bs-config.dev.json",
+    "prod": "lite-server --config bs-config.prod.json",
+    "build": "grunt production-build",
+    "cli": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stiglicode/long-number"
+  },
+  "keywords": [
+    "shortcut-num",
+    "long-num-to-short"
+  ],
+  "author": "Milan Stiglic @ 2021",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.4.0",
+    "grunt-cli": "^1.4.2",
+    "grunt-contrib-uglify": "^5.0.1",
+    "jit-grunt": "^0.10.0",
+    "lite-server": "^2.6.1",
+    "time-grunt": "^2.0.0"
+  }
+}
