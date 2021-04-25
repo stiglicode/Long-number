@@ -1,21 +1,27 @@
 module.exports = function(grunt) {
-    require('jit-grunt')(grunt);
-    require('time-grunt')(grunt);
+    require("jit-grunt")(grunt);
+    require("time-grunt")(grunt);
 
     grunt.initConfig({
         uglify: {
             js: {
                 options: {
                     sourceMap: true,
-                    sourceMapName: 'src/dist/static/js/app.sourcemap.map'
-                  },
+                    sourceMapName: "./dist/lns.min.js.map"
+                },
                 files:[{
-                    src: "src/dist/static/js/app.js",
-                    dest: "src/dist/static/js/app.min.js"
+                    src: "./dist/lns.js",
+                    dest: "./dist/lns.min.js"
                 }]
             },
         },
+        ts: {
+            default : {
+                src: ["./src/index.ts", "!node_modules/**"],
+                out: "dist/lns.js"
+            }
+        }
     })
-
-    grunt.registerTask("production-build", ['uglify']);
+    grunt.loadNpmTasks("grunt-ts");
+    grunt.registerTask("production-build", ["ts","uglify"]);
 }
