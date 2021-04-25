@@ -25,20 +25,24 @@
 //     }
 // }
 class LongNumberShort {
-    constructor(){
-        this._longNumber;
-        this._numberSuffix = {
-            bilionSK: "mld",
-            bilionEN: "b",
-            milion: "m",
-            thousand: "k"
-        }
-        if(typeof this._longNumber !== "number"){
-          return new Error(`Input type have to be a number type. Your input (${this._longNumber}) is type of ${typeof this._longNumber}`)
-        }
-    }
-    numberInput(num){
-      return this._longNumber = num;
-    }
-
+	constructor() {
+		this._longNumber;
+		this._numberSuffix = {
+			bilionSK: "mld",
+			bilionEN: "b",
+			milion: "m",
+			thousand: "k",
+		};
+		if (typeof this._longNumber !== "number") {
+			return new Error(
+				`Input type have to be a number type. Your input (${
+					this._longNumber
+				}) is type of ${typeof this._longNumber}`
+			);
+		}
+	}
+	numberInput(num) {
+		return (this._longNumber = num);
+	}
+}
 const LNS = new LongNumberShort();
