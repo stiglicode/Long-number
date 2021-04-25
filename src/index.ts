@@ -1,3 +1,4 @@
+import States from "./interface/state.interface";
 // const shortCutNumber = (number) => {
 //     const stringNumber = number.toString();
 //     if(number > 999 && number <= 9999) {
@@ -24,7 +25,15 @@
 //         return stringNumber;
 //     }
 // }
-class LongNumberShort {
+class LongNumberShort implements States {
+	_longNumber: string;
+	_numberSuffix: {
+		bilionSK: string;
+		bilionEN: string;
+		milion: string;
+		thousand: string;
+	};
+	// Constructor
 	constructor() {
 		this._longNumber;
 		this._numberSuffix = {
@@ -33,16 +42,17 @@ class LongNumberShort {
 			milion: "m",
 			thousand: "k",
 		};
-		if (typeof this._longNumber !== "number") {
-			return new Error(
-				`Input type have to be a number type. Your input (${
-					this._longNumber
-				}) is type of ${typeof this._longNumber}`
-			);
-		}
 	}
-	numberInput(num) {
-		return (this._longNumber = num);
+	// Methods
+	numberInput(num: number) {
+		if (typeof num === "number") {
+			this._longNumber = num.toString();
+		} else {
+			this._longNumber = num;
+		}
+		return this._longNumber;
 	}
 }
 const LNS = new LongNumberShort();
+
+console.log(LNS.numberInput(4));
