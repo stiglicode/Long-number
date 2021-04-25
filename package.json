@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "grunt production-build",
-    "dev": "node ./src/index.js"
+    "dev": "node ./src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,9 @@
     "grunt": "^1.4.0",
     "grunt-cli": "^1.4.2",
     "grunt-contrib-uglify": "^5.0.1",
+    "grunt-ts": "*",
     "jit-grunt": "^0.10.0",
-    "time-grunt": "^2.0.0"
+    "time-grunt": "^2.0.0",
+    "typescript": "^4.2.4"
   }
 }
