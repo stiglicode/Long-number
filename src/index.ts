@@ -1,4 +1,3 @@
-import States from "./interface/state.interface";
 // const shortCutNumber = (number) => {
 //     const stringNumber = number.toString();
 //     if(number > 999 && number <= 9999) {
@@ -25,6 +24,16 @@ import States from "./interface/state.interface";
 //         return stringNumber;
 //     }
 // }
+interface States {
+	_longNumber: string;
+	_numberSuffix: {
+		bilionSK: string;
+		bilionEN: string;
+		milion: string;
+		thousand: string;
+	};
+}
+
 class LongNumberShort implements States {
 	_longNumber: string;
 	_numberSuffix: {

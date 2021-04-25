@@ -24,6 +24,7 @@ build/
 target/
 dist/
 .tscache/
+src/index.js
 
 # JetBrains IDE
 .idea/
