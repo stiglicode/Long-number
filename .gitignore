@@ -23,6 +23,7 @@ build/
 # Maven
 target/
 dist/
+.tscache/
 
 # JetBrains IDE
 .idea/
