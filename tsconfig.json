@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "es3",
+        "module": "system",
+        "declaration": false,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "sourceMap": true,
+        "moduleResolution": "node",
+    },
+    "include": ["src/index.ts"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}
