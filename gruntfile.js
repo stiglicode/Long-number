@@ -18,10 +18,22 @@ module.exports = function (grunt) {
 			},
 		},
 		ts: {
-			default: {
+			test: {
+				files: [
+					{
+						src: ["./src/index.ts", "!node_modules/**"],
+						dest: "./test/lns.test.js",
+					},
+				],
+				options: {
+					watch: "./test/lns.test.js",
+					sourceMap: false,
+				},
+			},
+			production: {
 				tsconfig: "./tsconfig.json",
 				src: ["./src/index.ts", "!node_modules/**"],
-				out: "dist/lns.js",
+				out: "./dist/lns.js",
 			},
 		},
 	});
@@ -30,4 +42,5 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	// register
 	grunt.registerTask("production-build", ["ts", "uglify"]);
+	grunt.registerTask("dev-mode", ["ts:test"]);
 };

@@ -7,9 +7,8 @@
 		"removeComments": true,
 		"preserveConstEnums": true,
 		"suppressImplicitAnyIndexErrors": true,
-		// "sourceMap": true,
-		"moduleResolution": "node",
-		"watch": true
+		"sourceMap": true,
+		"moduleResolution": "node"
 	},
 	"include": ["src/index.ts"],
 	"exclude": ["node_modules", "**/*.spec.ts"]

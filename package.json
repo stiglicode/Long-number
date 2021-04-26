@@ -5,8 +5,8 @@
 	"main": "./src/index.js",
 	"scripts": {
 		"build": "grunt production-build",
-		"watch": "tsc",
-		"dev": "node src/index.js"
+		"watch": "tsc --watch --sourceMap false --outfile 'test/lns.test.js'",
+		"dev": "node test/lns.test.js"
 	},
 	"repository": {
 		"type": "git",
