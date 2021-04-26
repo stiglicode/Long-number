@@ -7,6 +7,7 @@
 node_modules/
 dist/
 build/
+test/
 
 # Compiled Java class files
 *.class
@@ -24,7 +25,6 @@ build/
 target/
 dist/
 .tscache/
-src/index.js
 
 # JetBrains IDE
 .idea/
