@@ -26,7 +26,6 @@ module.exports = function (grunt) {
 					},
 				],
 				options: {
-					watch: "./test/lns.test.js",
 					sourceMap: false,
 				},
 			},
@@ -41,6 +40,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks("grunt-ts");
 	grunt.loadNpmTasks("grunt-contrib-uglify");
 	// register
-	grunt.registerTask("production-build", ["ts", "uglify"]);
+	grunt.registerTask("production-build", ["ts:production", "uglify"]);
 	grunt.registerTask("dev-mode", ["ts:test"]);
 };
